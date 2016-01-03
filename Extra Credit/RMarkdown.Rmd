@@ -1,0 +1,143 @@
+---
+title: "CSCI B 565 Data Mining Bonus Homework"
+author: "Ganesh Nagarajan, gnagaraj@indiana.edu"
+date: "December 17, 2015"
+output: pdf_document
+---
+
+All work herein is solely mine.
+
+####Solutions
+1. Relative Frequencies of these labels
+
+```{r}
+# Load the Train Dataset to R
+tuneds <- read.csv("genresTrain.csv")
+# Create a Frequency Table with the Genre
+table(tuneds[,192])
+```
+
+2. Correlation of these features
+
+```{r}
+library(corrplot)
+num.tuneds<- tuneds[-192]
+# Find Correlation
+cor.tune <- cor(num.tuneds)
+# Plot Correlation
+corrplot(cor.tune,method = c("square"),title = "Correlation Plot",tl.pos = c("n"))
+cor.upper.tune <- cor.tune
+# Make the Lower triangular matrix of the correlation matrix 0
+cor.upper.tune[lower.tri(cor.upper.tune)] <- 0
+# Since the diagonals are always correlated, make them 0
+diag(cor.upper.tune) <- 0
+#Find the labels which have a perfect correlation
+cno <- which(cor.upper.tune == 1,arr.ind = TRUE)
+print("Elements which have perfect correlation")
+cno
+cno1 <- which(cor.upper.tune > 0.9,arr.ind = TRUE)
+print("Elements which have correlation with > 0.9")
+cno1
+```
+
+  + It can be seen that about 47 of these features are correlated. An analysis is done in the next section considering and omitting these features.
+
+3. There were about 60 performers
+4. 15-20 pieces were performed by each performer
+5. The first segment of the 20 segments with 191 features are available.
+6. Building the Classifier
+  + **Building a Naive Bayes Classifier with Feature Engineering and Normalization of the Data**
+  + A Naive bayes classifier was implemented for the training set. As discussed in the previous section, there are about 47 correlated features. This section removes these correlated features except one and the data is normalized by using the standardization formula, \ $\hat{x} = \frac{x - \overline{x}}{\sigma}$
+  
+```{r}
+# Remove the correlated columns
+tune.ds <- tuneds[,c(cno[,2],cno1[,2])*-1]
+
+#Normalization function
+normalize <- function(df){
+  v_cols<-ncol(df)
+  df_normalized <- df
+  for (i in 1:v_cols){
+    df_normalized[,i]<-(df_normalized[,i]-mean(df_normalized[,i]))/sd(df_normalized[,i])
+  }
+  return(df_normalized)
+}
+
+library(e1071)
+
+#Normalize the dataset
+df_norm.tune <- normalize(tune.ds[-147])
+df_norm.tune["GENRE"]<-tune.ds[147]
+
+# Build a Naive Bayes Model
+s<-naiveBayes(GENRE~.,data=df_norm.tune)
+# Create the confusion Matrix for Train dataset
+table(predict(s,df_norm.tune),df_norm.tune[,147])
+
+# Load the Test Dataset
+trainds <- read.csv("genresTest.csv")
+# Remove same correlated columns
+c_train.ds <- trainds[,c(cno[,2],cno1[,2])*-1]
+# Normalize the test dataset
+df_normal<-normalize(c_train.ds)
+# Read Base line from KNN
+baseline<-read.csv("genresBaseline.txt")
+# Confusion Matrix between the Naive Bayes prediction and the baseline KNN prediction.
+table(predict(s,df_normal[-1,]),baseline[,1])
+```
+
+  + **Building a Naive Bayes Classifier with Feature Engineering**
+  + This test run is without normalizing the data,
+```{r}
+library(corrplot)
+tuneds <- read.csv("genresTrain.csv")
+num.tuneds<- tuneds[-192]
+cor.tune <- cor(num.tuneds)
+cor.upper.tune <- cor.tune
+cor.upper.tune[lower.tri(cor.upper.tune)] <- 0
+diag(cor.upper.tune) <- 0
+cno <- which(cor.upper.tune == 1,arr.ind = TRUE)
+cno1 <- which(cor.upper.tune > 0.9,arr.ind = TRUE)
+# Removing correlations
+tune.ds <- tuneds[,c(cno[,2],cno1[,2])*-1]
+
+library(e1071)
+# Train the Model
+s<-naiveBayes(GENRE~.,data=tune.ds)
+# Confiusion Matrix of the Training set
+table(predict(s,tune.ds),tune.ds[,147])
+
+
+trainds <- read.csv("genresTest.csv")
+c_train.ds <- trainds[,c(cno[,2],cno1[,2])*-1]
+baseline<-read.csv("genresBaseline.txt")
+# COnfusion matrix for the Naive Bayes classifier output and the KNN output.
+table(predict(s,c_train.ds[-1,]),baseline[,1])
+```
+  + **Building a Naive Bayes Classifier straight from data**
+  + No feature enginnering or standardization
+  
+```{r}
+library(corrplot)
+tuneds <- read.csv("genresTrain.csv")
+
+library(e1071)
+s<-naiveBayes(GENRE~.,data=tuneds)
+# Confusion Matrix for Train Dataset
+table(predict(s,tuneds),tuneds[,192])
+
+trainds <- read.csv("genresTest.csv")
+baseline<-read.csv("genresBaseline.txt")
+# COnfusion Matrix for the Naive Bayes Ouput and Knn baseline output
+table(predict(s,trainds[-1,]),baseline[,1])
+```
+7. Conclusions
+* Standardization or normalization, atleast with this example created lot of noise and aberrant results.
+* Removing correlated columns had almost same accuracy as the full dataset. Infact, the correlatied columns removed dataset had more matching to blues for the output of the KNN than the full dataset.
+* Matching the full dataset has the most match with the KNN baseline model.
+
+Regarding the quality of the model, the full blown naive bayes has 7097 values classified out of 10269 values of test dataset. This brings up the accutacy of 69%.
+
+8. An 1:NN algorithm was used for base solution. The proposed model is compared with the results of the baseline soution in the above question.
+###References and acknowledgements
+1. Packages Corrplot 0.73 and e1071 1.6-7 packages were used for this assignment.

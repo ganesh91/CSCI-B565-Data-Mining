@@ -1,0 +1,14 @@
+inspect(ru_genere)
+   lhs                          rhs                support   confidence lift    
+1  {Documentary}             => {Action}           0.7857143 1          1.166667
+2  {Documentary}             => {Classic}          0.7857143 1          1.076923
+3  {Comedy}                  => {Science  Fiction} 0.7857143 1          1.166667
+4  {Action}                  => {Classic}          0.8571429 1          1.076923
+5  {Action,Documentary}      => {Classic}          0.7857143 1          1.076923
+6  {Classic,Documentary}     => {Action}           0.7857143 1          1.166667
+7  {Comedy,Horror}           => {Science  Fiction} 0.7142857 1          1.166667
+8  {Horror,Science  Fiction} => {Comedy}           0.7142857 1          1.272727
+9  {Comedy,Romance}          => {Science  Fiction} 0.7142857 1          1.166667
+10 {Classic,Comedy}          => {Science  Fiction} 0.7142857 1          1.166667
+11 {Action,Romance}          => {Classic}          0.7142857 1          1.076923
+12 {Action,Science  Fiction} => {Classic}          0.7142857 1          1.076923

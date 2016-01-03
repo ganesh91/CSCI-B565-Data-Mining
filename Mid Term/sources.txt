@@ -1,0 +1,11 @@
+http://stackoverflow.com/questions/16515370/r-basket-analysis-using-arules-package-with-unique-order-number-but-duplicate-or
+https://prdeepakbabu.wordpress.com/2010/11/13/market-basket-analysisassociation-rule-mining-using-r-package-arules/
+http://stats.stackexchange.com/questions/31083/how-to-produce-a-pretty-plot-of-the-results-of-k-means-cluster-analysis
+http://stackoverflow.com/questions/12911234/clustering-large-data-matrix-using-r
+http://www.rdatamining.com/examples/association-rules
+http://www.rdatamining.com/docs/data-clustering-with-r
+http://stackoverflow.com/questions/6750546/export-csv-without-col-names
+http://stackoverflow.com/questions/32449280/how-to-create-a-decision-boundary-graph-for-knn-models-in-the-caret-package
+http://blog.datacamp.com/machine-learning-in-r/
+http://www.statmethods.net/advstats/cluster.html
+http://stackoverflow.com/questions/32677141/how-to-plot-using-ggplot2-a-numeric-variable-against-categorical-variable-after

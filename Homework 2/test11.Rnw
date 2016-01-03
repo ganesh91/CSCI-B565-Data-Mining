@@ -1,0 +1,25 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+calculateKL <- function(dataframe,col1,col2){
+  output<-matrix(0,nrow=length(col1),ncol = length(col1))
+  for (i in 1:length(col1)){
+    for(j in 1:length(col1)){
+      #print(i)
+      k1<-freqs(dataframe[,i])
+      k2<-freqs(dataframe[,j])
+      kl<-KL.empirical(k1,k2,unit = "log2")
+      output[i,j]<-kl
+      
+    }
+  }
+  print(output)
+}
+delkl<-delstar[,2:10]
+col<-1:9
+calculateKL(delkl,col,col)
+
+
+
+\end{document}

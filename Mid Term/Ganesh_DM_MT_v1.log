@@ -1,0 +1,767 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.3)  25 OCT 2015 20:28
+entering extended mode
+**Ganesh_DM_MT_v1.tex
+(Ganesh_DM_MT_v1.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\c@thm=\count87
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen103
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks15
+\thm@bodyfont=\toks16
+\thm@headfont=\toks17
+\thm@notefont=\toks18
+\thm@headpunct=\toks19
+\thm@preskip=\skip44
+\thm@postskip=\skip45
+\thm@headsep=\skip46
+\dth@everypar=\toks20
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
+Package: algpseudocode 
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count89
+\c@ALG@rem=\count90
+\c@ALG@nested=\count91
+\ALG@tlm=\skip47
+\ALG@thistlm=\skip48
+\c@ALG@Lnr=\count92
+\c@ALG@blocknr=\count93
+\c@ALG@storecount=\count94
+\c@ALG@tmpcounter=\count95
+\ALG@tmplength=\skip49
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count96
+\lst@gtempboxa=\box26
+\lst@token=\toks22
+\lst@length=\count97
+\lst@currlwidth=\dimen106
+\lst@column=\count98
+\lst@pos=\count99
+\lst@lostspace=\dimen107
+\lst@width=\dimen108
+\lst@newlines=\count100
+\lst@lineno=\count101
+\lst@maxwidth=\dimen109
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count102
+\lst@skipnumbers=\count103
+\lst@framebox=\box27
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(Ganesh_DM_MT_v1.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count104
+\scratchdimen=\dimen110
+\scratchbox=\box28
+\nofMPsegments=\count105
+\nofMParguments=\count106
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count107
+\MPscratchDim=\dimen111
+\MPnumerator=\count108
+\makeMPintoPDFobject=\count109
+\everyMPtoPDFconversion=\toks24
+)
+\c@lstlisting=\count110
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
+
+ []
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+) [1
+
+{C:/Users/Ganesh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 97.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <10> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 97.
+
+Overfull \hbox (21.24953pt too wide) in paragraph at lines 97--98
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.24971pt too wide) in paragraph at lines 115--116
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][] 
+ []
+
+<ETl.JPG, id=10, 776.9025pt x 256.70906pt>
+File: ETl.JPG Graphic file (type jpg)
+ <use ETl.JPG>
+Package pdftex.def Info: ETl.JPG used on input line 132.
+(pdftex.def)             Requested size: 388.45029pt x 128.3542pt.
+
+<ifexists.JPG, id=11, 757.32938pt x 189.70876pt>
+File: ifexists.JPG Graphic file (type jpg)
+ <use ifexists.JPG>
+Package pdftex.def Info: ifexists.JPG used on input line 134.
+(pdftex.def)             Requested size: 378.66376pt x 94.85414pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
+
+ []
+
+[2 <./ETl.JPG>]
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(transform_data.sql
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+
+Overfull \hbox (39.24971pt too wide) in paragraph at lines 21--22
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.24934pt too wide) in paragraph at lines 28--29
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (51.24983pt too wide) in paragraph at lines 29--30
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (51.24983pt too wide) in paragraph at lines 32--33
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[3 <./ifexists.JPG>]
+Overfull \hbox (51.24983pt too wide) in paragraph at lines 35--36
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (51.24983pt too wide) in paragraph at lines 38--39
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (51.24983pt too wide) in paragraph at lines 41--42
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (51.24983pt too wide) in paragraph at lines 44--45
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) <sql_rs1.JPG, id=23, 383.93437pt x 270.25969pt>
+File: sql_rs1.JPG Graphic file (type jpg)
+ <use sql_rs1.JPG>
+Package pdftex.def Info: sql_rs1.JPG used on input line 147.
+(pdftex.def)             Requested size: 383.93343pt x 270.25902pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+[4 <./sql_rs1.JPG>] <EDA1.png, id=27, 803.0pt x 803.0pt>
+File: EDA1.png Graphic file (type png)
+ <use EDA1.png>
+Package pdftex.def Info: EDA1.png used on input line 154.
+(pdftex.def)             Requested size: 401.49902pt x 401.49902pt.
+
+<EDA2.png, id=28, 803.0pt x 803.0pt>
+File: EDA2.png Graphic file (type png)
+ <use EDA2.png>
+Package pdftex.def Info: EDA2.png used on input line 157.
+(pdftex.def)             Requested size: 401.49902pt x 401.49902pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
+
+ []
+
+[5 <./EDA1.png>] <EDA3.png, id=33, 543.02875pt x 288.07625pt>
+File: EDA3.png Graphic file (type png)
+ <use EDA3.png>
+Package pdftex.def Info: EDA3.png used on input line 159.
+(pdftex.def)             Requested size: 271.5137pt x 144.03777pt.
+
+<EDA4.png, id=34, 543.02875pt x 288.07625pt>
+File: EDA4.png Graphic file (type png)
+ <use EDA4.png>
+Package pdftex.def Info: EDA4.png used on input line 161.
+(pdftex.def)             Requested size: 271.5137pt x 144.03777pt.
+ [6 <./EDA2.png> <./EDA3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+<kdeterminationbygenere.png, id=40, 803.0pt x 401.5pt>
+File: kdeterminationbygenere.png Graphic file (type png)
+
+<use kdeterminationbygenere.png>
+Package pdftex.def Info: kdeterminationbygenere.png used on input line 171.
+(pdftex.def)             Requested size: 401.49902pt x 200.7495pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
+
+ []
+
+(kmeans.R [7 <./EDA4.png> <./kdeterminationbygenere.png>]
+Overfull \hbox (11.24965pt too wide) in paragraph at lines 10--11
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.24965pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.24965pt too wide) in paragraph at lines 18--19
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 26.
+) [8] <clustervisualbygenere.png, id=51, 803.0pt x 401.5pt>
+File: clustervisualbygenere.png Graphic file (type png)
+
+<use clustervisualbygenere.png>
+Package pdftex.def Info: clustervisualbygenere.png used on input line 176.
+(pdftex.def)             Requested size: 401.49902pt x 200.7495pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--182
+
+ []
+
+<kdeterminationbymovie.png, id=52, 803.0pt x 401.5pt>
+File: kdeterminationbymovie.png Graphic file (type png)
+
+<use kdeterminationbymovie.png>
+Package pdftex.def Info: kdeterminationbymovie.png used on input line 186.
+(pdftex.def)             Requested size: 401.49902pt x 200.7495pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+
+ []
+
+[9 <./clustervisualbygenere.png> <./kdeterminationbymovie.png>]
+<movie_df_corrmatrix_asquare.png, id=58, 401.5pt x 401.5pt>
+File: movie_df_corrmatrix_asquare.png Graphic file (type png)
+
+<use movie_df_corrmatrix_asquare.png>
+Package pdftex.def Info: movie_df_corrmatrix_asquare.png used on input line 192
+.
+(pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
+
+<movie_cor_numbers.png, id=59, 451.6875pt x 451.6875pt>
+File: movie_cor_numbers.png Graphic file (type png)
+
+<use movie_cor_numbers.png>
+Package pdftex.def Info: movie_cor_numbers.png used on input line 193.
+(pdftex.def)             Requested size: 225.84319pt x 225.84319pt.
+
+Overfull \hbox (24.75987pt too wide) in paragraph at lines 191--195
+[] [] 
+ []
+
+<clustervisualbyfilm.png, id=60, 803.0pt x 401.5pt>
+File: clustervisualbyfilm.png Graphic file (type png)
+
+<use clustervisualbyfilm.png>
+Package pdftex.def Info: clustervisualbyfilm.png used on input line 199.
+(pdftex.def)             Requested size: 401.49902pt x 200.7495pt.
+ [10 <./movie_df_corrmatrix_asquare.png> <./movie_cor_numbers.png (PNG copy)> <
+./clustervisualbyfilm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
+
+ []
+
+(apriori.R
+Overfull \hbox (69.9498pt too wide) in paragraph at lines 7--8
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.94919pt too wide) in paragraph at lines 23--24
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[11]
+Overfull \hbox (69.9498pt too wide) in paragraph at lines 25--26
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (45.94955pt too wide) in paragraph at lines 36--37
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (57.94968pt too wide) in paragraph at lines 39--40
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 1  {Documentary}             => {Action}           0.785714
+3 1          1.166667[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 2  {Documentary}             => {Classic}          0.785714
+3 1          1.076923[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 3  {Comedy}                  => {Science  Fiction} 0.785714
+3 1          1.166667[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 4  {Action}                  => {Classic}          0.857142
+9 1          1.076923[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 5  {Action,Documentary}      => {Classic}          0.785714
+3 1          1.076923[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 6  {Classic,Documentary}     => {Action}           0.785714
+3 1          1.166667[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 7  {Comedy,Horror}           => {Science  Fiction} 0.714285
+7 1          1.166667[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 8  {Horror,Science  Fiction} => {Comedy}           0.714285
+7 1          1.272727[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 9  {Comedy,Romance}          => {Science  Fiction} 0.714285
+7 1          1.166667[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 10 {Classic,Comedy}          => {Science  Fiction} 0.714285
+7 1          1.166667[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 11 {Action,Romance}          => {Classic}          0.714285
+7 1          1.076923[] 
+ []
+
+
+Overfull \hbox (15.94131pt too wide) in paragraph at lines 248--248
+ []\OT1/cmtt/m/n/10 12 {Action,Science  Fiction} => {Classic}          0.714285
+7 1          1.076923[] 
+ []
+
+<association_genere_1.png, id=70, 803.0pt x 803.0pt>
+File: association_genere_1.png Graphic file (type png)
+
+<use association_genere_1.png>
+Package pdftex.def Info: association_genere_1.png used on input line 254.
+(pdftex.def)             Requested size: 401.49902pt x 401.49902pt.
+
+<association_genere_2.png, id=71, 803.0pt x 803.0pt>
+File: association_genere_2.png Graphic file (type png)
+
+<use association_genere_2.png>
+Package pdftex.def Info: association_genere_2.png used on input line 255.
+(pdftex.def)             Requested size: 401.49902pt x 401.49902pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--256
+
+ []
+
+[12] [13 <./association_genere_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+[14 <./association_genere_2.png>]
+<associationbyfilm_1.png, id=84, 803.0pt x 803.0pt>
+File: associationbyfilm_1.png Graphic file (type png)
+
+<use associationbyfilm_1.png>
+Package pdftex.def Info: associationbyfilm_1.png used on input line 297.
+(pdftex.def)             Requested size: 401.49902pt x 401.49902pt.
+
+<associationrulebyfilm_2.png, id=85, 803.0pt x 803.0pt>
+File: associationrulebyfilm_2.png Graphic file (type png)
+
+<use associationrulebyfilm_2.png>
+Package pdftex.def Info: associationrulebyfilm_2.png used on input line 298.
+(pdftex.def)             Requested size: 401.49902pt x 401.49902pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
+
+ []
+
+[15] [16 <./associationbyfilm_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
+
+ []
+
+(knn.R [17 <./associationrulebyfilm_2.png>]
+Overfull \hbox (29.24983pt too wide) in paragraph at lines 8--9
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 309--311
+
+ []
+
+(nbayes.R
+Overfull \hbox (4.2498pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[18])
+Underfull \hbox (badness 10000) in paragraph at lines 354--356
+
+ []
+
+(dendogram.R
+Overfull \hbox (4.2498pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[19]) <hierarchial1.png, id=104, 803.0pt x 803.0pt>
+File: hierarchial1.png Graphic file (type png)
+ <use hierarchial1.png>
+Package pdftex.def Info: hierarchial1.png used on input line 359.
+(pdftex.def)             Requested size: 401.49902pt x 401.49902pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--360
+
+ []
+
+<dendogram_2.png, id=105, 803.0pt x 803.0pt>
+File: dendogram_2.png Graphic file (type png)
+ <use dendogram_2.png>
+Package pdftex.def Info: dendogram_2.png used on input line 361.
+(pdftex.def)             Requested size: 401.49902pt x 401.49902pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
+
+ []
+
+[20 <./hierarchial1.png>] [21 <./dendogram_2.png>]
+Overfull \hbox (96.99048pt too wide) in paragraph at lines 437--437
+ []\OT1/cmtt/m/n/10 kCentroids_l.get(tuple_l.indexOf(Collections.min(tuple_l)))
+.currPoints[noP]=(int)dataSet.get(i, 0);[] 
+ []
+
+
+Overfull \hbox (7.74126pt too wide) in paragraph at lines 437--437
+ []\OT1/cmtt/m/n/10 tuple_l.set(tuple_l.indexOf(Collections.min(tuple_l)),Colle
+ctions.max(tuple_l)+1);[] 
+ []
+
+[22]
+Overfull \hbox (12.99121pt too wide) in paragraph at lines 478--478
+ []\OT1/cmtt/m/n/10 1324572.000   7.167   6.744   6.709   5.684   5.449   7.850
+   6.056   6.017   2.560[] 
+ []
+
+
+Overfull \hbox (12.99121pt too wide) in paragraph at lines 478--478
+ []\OT1/cmtt/m/n/10 1324572.000   7.075   6.427   6.416   5.459   5.290   7.427
+   5.859   5.792   2.514[] 
+ []
+
+
+Overfull \hbox (12.99121pt too wide) in paragraph at lines 478--478
+ []\OT1/cmtt/m/n/10 1347749.000   3.022   1.278   1.394   1.343   2.080   1.301
+   2.085   1.229   1.105[] 
+ []
+
+
+Overfull \hbox (12.99121pt too wide) in paragraph at lines 478--478
+ []\OT1/cmtt/m/n/10 1347749.000   2.874   1.199   1.308   1.264   2.009   1.231
+   2.007   1.129   1.061[] 
+ []
+
+[23]
+Overfull \hbox (32.99084pt too wide) in paragraph at lines 508--508
+ []\OT1/cmtt/m/n/10 1148278.000   4.442   3.151   3.215   2.830   3.234   3.545
+   3.445   2.870   1.603   4.000[] 
+ []
+
+
+Overfull \hbox (32.99084pt too wide) in paragraph at lines 508--508
+ []\OT1/cmtt/m/n/10 1148278.000   4.442   3.151   3.215   2.830   3.234   3.545
+   3.445   2.870   1.603   4.000[] 
+ []
+
+
+Overfull \hbox (32.99084pt too wide) in paragraph at lines 508--508
+ []\OT1/cmtt/m/n/10 1336798.000   4.442   3.151   3.215   2.830   3.234   3.545
+   3.445   2.870   1.603   2.000[] 
+ []
+
+
+Overfull \hbox (32.99084pt too wide) in paragraph at lines 508--508
+ []\OT1/cmtt/m/n/10 1336798.000   4.442   3.151   3.215   2.830   3.234   3.545
+   3.445   2.870   1.603   2.000[] 
+ []
+
+<kmeansStart.png, id=126, 505.13719pt x 319.94531pt>
+File: kmeansStart.png Graphic file (type png)
+ <use kmeansStart.png>
+Package pdftex.def Info: kmeansStart.png used on input line 510.
+(pdftex.def)             Requested size: 353.59361pt x 223.96017pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--511
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--511
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
+
+ []
+
+[24 <./kmeansStart.png>]
+Overfull \hbox (9.9959pt too wide) in paragraph at lines 543--544
+[]\OT1/cmr/m/n/10 http://stackoverflow.com/questions/16515370/r-basket-analysis
+-using-arules-package-with-unique-order-
+ []
+
+
+Overfull \hbox (8.3849pt too wide) in paragraph at lines 544--545
+[]\OT1/cmr/m/n/10 https://prdeepakbabu.wordpress.com/2010/11/13/market-basket-a
+nalysisassociation-rule-mining-using-
+ []
+
+
+Overfull \hbox (13.55145pt too wide) in paragraph at lines 545--546
+[]\OT1/cmr/m/n/10 http://stats.stackexchange.com/questions/31083/how-to-produce
+-a-pretty-plot-of-the-results-of-k-means-
+ []
+
+
+Overfull \hbox (10.9404pt too wide) in paragraph at lines 550--551
+[]\OT1/cmr/m/n/10 http://stackoverflow.com/questions/32449280/how-to-create-a-d
+ecision-boundary-graph-for-knn-models-
+ []
+
+[25]
+Overfull \hbox (43.96825pt too wide) in paragraph at lines 553--554
+[]\OT1/cmr/m/n/10 http://stackoverflow.com/questions/32677141/how-to-plot-using
+-ggplot2-a-numeric-variable-against-categorical-
+ []
+
+[26] (Ganesh_DM_MT_v1.aux) ) 
+Here is how much of TeX's memory you used:
+ 4705 strings out of 493673
+ 62805 string characters out of 3141528
+ 186812 words of memory out of 3000000
+ 7967 multiletter control sequences out of 15000+200000
+ 12935 words of font info for 50 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 29i,7n,43p,579b,1989s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmbsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmib10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Ganesh_DM_MT_v1.pdf (26 pages, 571268 bytes).
+PDF statistics:
+ 193 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+

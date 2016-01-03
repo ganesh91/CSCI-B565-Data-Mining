@@ -1,0 +1,301 @@
+% LaTeX Article Template - customizing header and footer
+\documentclass{article}
+
+\newtheorem{thm}{Theorem}
+
+% Set left margin - The default is 1 inch, so the following 
+% command sets a 1.25-inch left margin.
+\setlength{\oddsidemargin}{0.25in}
+
+% Set width of the text - What is left will be the right margin.
+% In this case, right margin is 8.5in - 1.25in - 6in = 1.25in.
+\setlength{\textwidth}{6in}
+
+% Set top margin - The default is 1 inch, so the following 
+% command sets a 0.75-inch top margin.
+\setlength{\topmargin}{-0.25in}
+
+% Set height of the header
+\setlength{\headheight}{0.3in}
+
+% Set vertical distance between the header and the text
+\setlength{\headsep}{0.2in}
+
+% Set height of the text
+\setlength{\textheight}{9in}
+
+% Set vertical distance between the text and the
+% bottom of footer
+\setlength{\footskip}{0.1in}
+
+% Set the beginning of a LaTeX document
+\usepackage{multirow}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{algpseudocode}
+\graphicspath{%
+    {converted_graphics/}% inserted by PCTeX
+    {/}% inserted by PCTeX
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}\title{Homework 2\\ Computer Science \\ Fall 2015\\ B565}         % Enter your title between curly braces
+\author{Professor Dalkilic\\ Sunday, October 18, 9:00 p.m.}        % Enter your name between curly braces
+\date{\today}          % Enter your date or \today between curly braces
+\maketitle
+
+
+% Redefine "plain" pagestyle
+\makeatother     % `@' is restored as a "non-letter" character
+
+
+
+% Set to use the "plain" pagestyle
+\pagestyle{plain}
+\section*{Directions}
+Please follow the syllabus guidelines in turning in your homework.  I will provide the \LaTeX{} of this document too.  You may use it or create one of your own.
+
+\section{$k$-means Algorithm in Theory}
+This part of the problem asks you to reflect on $k$-means and work through its theoretical elements.  I have written algorithm below.   Answer the subsequent questions.
+
+
+\begin{center}
+\begin{algorithmic}[1]\label{kmeans}
+\State{\bf ALGORITHM} \texttt{kmeans}
+\State {\bf INPUT} (\textsf{data} $\Delta$, distance $d:\Delta^2\rightarrow \mathbb{R}_{\geq 0}$, \textsf{centoid number} $k$, \textsf{threshold} $\tau$)
+\State {\bf OUTPUT} (\textsf{Set of centoids} $c_1, c_2, \ldots, c_k$)
+\State Assume centroid is structure $c = (v \in DOM(\Delta), B\subseteq \Delta)$
+\State  $c.v$ is the centroid value and $c.B$ is the set of nearest points.
+\State $\tau$ is a percentage change from previous centroids
+\State For example, $\{c_1, c_2, \ldots, c_k\}$ is previous and $\{d_1, d_2, \ldots, d_k\}$ is current
+\State Total difference is $\Sigma_i \Sigma_j d(c_i, d_j)$
+\State $Dom(\Delta)$ denotes domain of object.
+\State $i = 0$
+\Comment{Initialize iterate where superscript is iteration}
+\For{$j = 1,k$}
+\Comment{Initialize Centroids}
+\State $c_j^i.v \gets  random(Dom(\Delta))$
+\State $c_j^i.B \gets \emptyset$
+\EndFor
+\State $f_i = \Sigma_{j=1}^k\Sigma_{\ell = 1}^k d(c_j^i.v, random(Dom(\Delta))$
+\Comment{Bootstrap difference between past centroids and current}
+\Repeat
+\State $i \gets i + 1$
+\For {$\delta \in \Delta$}
+\State $c_j^i.B \gets c.B \cup \{\delta\}$, where $\min_{c_j^i}\{d(\delta, c_j^i.v)\}$
+\State \Comment{Associate a data point $\delta$ with the nearest centroid $c_j^i.v$}
+\EndFor
+\For {$j = 1, k$}
+\State $c_j^i.v \gets ave(c_j^i.B)$
+\Comment{Update centroid to be {\it best} representative of nearest data}
+\State $c_j^i.B \gets \emptyset$
+\Comment{$ave$ is easiest representative}
+\EndFor
+\State $f_i \gets \Sigma_{j = 1}^{k}\Sigma_{\ell = 1}^{k}d(c_j^{i}.v, c_\ell^{i-1})$ 
+\Comment{Find the difference between previous centroids and current centroids}
+\Until{$(|f_i - f_{i-1}| < \tau(f_{i-1}))$}
+\State {\bf return} ($c_1^i, c_2^i, \ldots, c_3^i$) 
+\Comment{If there's less than $\tau$ change, then we're finished.}
+\end{algorithmic}
+\end{center}
+\subsection{Small, partial example}
+Let's assume the data is:
+\[\Delta = \{  (2, 5),  (1,5) , (22, 55), (42, 12), (15,16)\}\]
+and the distance function is:
+\[d((x_1, y_1) ,(x_2, y_2)) = [(x_1-x_2)^2 + (y_1 - y_2)^2)]^{1/2}\]
+and $k=2$ and $\tau = 0.10$.
+
+
+\begin{center}
+\begin{algorithmic}[1]
+\State $c_1^0.v \gets (10,7)$
+\State $c_1^0.B \gets \emptyset$
+\State $c_2^0.v \gets (16,19)$
+\State $c_2^0.B \gets \emptyset$
+\State Consider the point $\delta_1 = (2,5)$
+\State $d(\delta_1, c_1^0.v) = 8$ and $d(\delta_1, c_2^0.v) = 20$, so $c_1^1.B \gets B \cup \{\delta_1\}$
+\State Continuing for the rest of $\Delta$ we have $c_1^1.B = \{\delta_1, \delta_2\}$ and $c_2^2.B = \{\delta_3, \delta_4, \delta_5\}$
+\State We now find the best representative of each centroid: in this case, the simple average (nearest integer) of each dimension.
+\State $c_1^1.v = ((2+1)/2, (5+5)/2) = (2,5)$ and $c_2^1.v = ((22+42+15)/3, (55+12+16)/3))= (26, 28)$
+\State We can now find the difference between the previous centroids ($i=0$) and current ($i=1$)
+\State Bootstrap with two earlier random points $(2,4), (6,50)$
+\State $f_0 = d((2,4), c_1^0) + d((2,4),c_2^0) + d((6,50), c_1^0) + d((6,50),c_2^0)= 107$
+\State $f_1 = d(c_1^0, c_1^1) + d(c_1^0, c_2^1) + d(c_2^0, c_1^1) + d(c_2^0, c_2^1) =68$
+\State Since $|68 - 107| < .1(107) \rightarrow 39 < 11$, we must iterate again.
+\end{algorithmic}
+\end{center}
+
+
+\subsection{Questions}
+
+\begin{enumerate}
+\item Does the algorithm always converge? Given your answer, what extra formal parameter is needed  to the function.  How do you decide it's actual value?
+\item What is the reason initialization of $k$-means is problematic?
+\item What is the run-time of this algorithm (include your new parameter from Question 1.
+\item In line 12, $f_i = 2d((0,0), c_1^0) + 2d((0,0), c_2^0)$.  Why are the distances multiplied by 2?
+\item In line 21, we use $ave$ to indicate average; however, the centroid is more correctly the best representative of the data that nearest.  Give two more ways (functions) that yield a best representative.
+\item Modify the algorithm to identify when two centroids are {\it too} close to one another.   There will likely be more than one extra parameter needed to the algorithm.  Discuss what your modification does.
+
+\item Let  $x = \{a,b,c,d\}, y = \{a, b, e\}, z = \{b, f\}, \mathcal{U} = \{a,b,c,d,e,f\}$.  Compute the distances using \begin{eqnarray}\label{foo}  d(x,y) &=& \left\{\begin{array}{l} 0,\ \ \ x = y \\ 1,\ \ \  x\neq y \end{array}\right. \end{eqnarray}\label{foo}
+The signature of the distance function is: $d:\mathsf{Set}^2 \rightarrow \mathbb{R}_{\geq 0}$.
+\begin{enumerate}
+\item $\neg x = \mathcal{U} - \{a,b,c,d\} = \{e,f\}$
+\item $\neg\, \mathcal{U} = \emptyset$
+\item $d(x,y) = 1$
+\item $d(x\cap y, \{a, b\}) = 0$
+\item $d(x, x \cup y) =$
+\item $d(\neg(x \cap y), \neg x \cup \neg y) =$
+\end{enumerate}
+
+ \begin{eqnarray*}  J(x,y) &=&|x \cap y|/|x \cup y| \\   d(x,y) &=& 1-J(x,y) \end{eqnarray*}
+The signature of the distance function is: $d:\mathsf{Set}^2 \rightarrow \mathbb{R}_{\geq 0}$.
+\begin{enumerate}
+\item $d(x,y) = $
+\item $d(x\cap y, \{a, b\}) = $
+\item $d(x, x \cup y) =$
+\item $d(\neg(x \cap y), \neg x \cup \neg y) =$
+\end{enumerate}
+\item Assume bit vectors (as strings of 0's and 1's)  over the set $\{a,b,c,d,e,f\}$.  Then $x = \{a,b,c,d\}$ is $\mathrm{\bf x} = 111100$.  Similarly, $\mathrm{\bf y} = 110010, \mathrm{\bf z} = 010001$.  Individually, $ \mathrm{\bf x}[0] = 1, \mathrm{\bf x}[1] = 1$, {\it etc.}  To remind the student, $\perp$ means the program stopped because of a bad computation. Let the distance function be the Hamming distance between the vector:
+\begin{eqnarray}
+c(x,y) &=& \left\{\begin{array}{l}0, \ \ \ x = y\\ 1, \ \ \ ot herwise\end{array}\right. \mbox{\rm for individual characters}\\
+d(\mathrm{\bf x},\mathrm{\bf y}) &=& \Sigma_{i=0}^{n}c(\mathrm{\bf x}[i], \mathrm{\bf y}[i]) \ \ \ \ n = ||\mathrm{\bf x}||, \mbox{\rm the length of the string.}
+\end{eqnarray}
+The signature of the distance function is: $d:\mathsf{String}^2 \rightarrow \mathbb{R}_{\geq 0}$.  Assume we have some string functions and a constant:
+\begin{eqnarray}
+\textvisiblespace &=& \mbox{\rm space}\\
+concat(\texttt{b}, \texttt{at}) &=& \texttt{bat}\\
+concat(\texttt{bat}, \epsilon) &=& \texttt{bat}\\
+contat(\epsilon, \texttt{bat}) &=& \texttt{bat}\\
+upper(\texttt{a}) &=& \texttt{A}\\
+space(\texttt{b\textvisiblespace a\textvisiblespace t}) &=& \texttt{bat}
+\end{eqnarray}
+\begin{enumerate}
+\item $d(\texttt{x}, \texttt{y}) = $
+\item $d(concat(\texttt{x}, \texttt{x}), concat(\texttt{x},\texttt{y})) = $
+\item Discuss the two problems above.
+\item $d(\texttt{N\textvisiblespace orth}, \texttt{nort\textvisiblespace h}) = $
+\item $d(upper(space(\texttt{N\textvisiblespace orth})), upper(space(\texttt{nort\textvisiblespace h}))) = $
+\item $d(\texttt{north}, \texttt{south}) = $
+\item Because strings are seldom fixed to any length, finding distance is even more difficult. strings of unequal length.  The table below shows {\it some} strings indicating the direction prefixed or suffixed to addresses:
+\begin{center}
+\begin{tabular}{l} \hline 
+NORTH \\
+North \\
+N \\
+N. \\
+north \\
+nor \\
+n.\\  
+\textvisiblespace n \\ \hline 
+\end{tabular}\end{center}
+ So the original distance would simply not function, {\it e.g.,} 
+\begin{eqnarray} d(\texttt{N.}, \texttt{North}) &=& \perp\end{eqnarray}
+How would you rewrite the distance function to effectively deal with this problem?
+\end{enumerate}
+\item Assume your data is a set and string pair,  $\delta = ( \textsf{Set}\ x, \textsf{String}\ y)$.  Create a metric over this pair.  In otherwords, 
+\begin{eqnarray*}
+d((\textsf{Set}\ x_1, \textsf{String}\ y_1), (\textsf{Set}\ x_2, \textsf{String}\ y_2)) &=& 
+\end{eqnarray*}
+ Demonstrate that it is indeed a metric.
+\end{enumerate}
+
+
+
+
+
+
+\section{Application of $k$-means to medical data}
+
+ This problem examines Wolberg's breast cancer data\cite{WMbreast90}.  The data is found at\\
+  {\texttt {http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/}}\\
+  \begin{tabular}{l||l}
+data & {\texttt{breast-cancer-wisconsin.data}}\\ \hline 
+description &  {\texttt{breast-cancer-wisconsin.names}}  
+\end{tabular}
+\begin{enumerate}\item  Suppose you're working to help a clinic serve a community that has limited resources to identify then treat breast cancer.  The cost of a biopsy is from \$1000 to \$5000.  The cost of a masectomy is \$15,000 to \$55,000 (these are representative costs in 2015).   
+
+ \begin{enumerate} \item What was the total cost of the biopsies?  \item What would have been the likely total cost of masectomies?  \end{enumerate} \item Ignoring the \texttt{Sample code number} (SCN), how many attributes does $\Delta$ have? \item How many missing values exist (total)? How many patients have missing values? Give the SCNs for that have missing data.  Of these data, would you have recommended re-examination for the women?  What would be the cost be?  What is the error rate (in otherwords, given $x$ as the number of patients, what is $f(x) = y$ where $y$ is the number of mistakes.  Remove the tuples that have missing data.  Let $\Delta^*$ be a cleaned $\Delta$: the tuples with the missing values are removed. \texttt{R} offers several ways to remove unknown data, though you are free to write your own code.  Let $\Delta^m = \Delta - \Delta^*$.  For each $\delta \in\Delta^m$, replace the unknown data using one of the techniques we discussed in class; alternatively, you may employ your won approach.  No matter how you decide to replace the unknowns, explain fully.  The final data should be presented as $(\texttt{SCN}, A_i, data)$ where \texttt{SCN} is the tuple key, $A_i$ is the attribute, and $data$ is the new data. \begin{enumerate} \item Is the amount of missing data significant? \item Assess the significance of either keeping or removing the tuples with unknown data. You should consider both the morbidity and cost.\end{enumerate} \item Assume the attribute \texttt{Clump Thickness} is $A_1$, \texttt{Uniformity of Cell Size} is $A_2$ and so on.  Attribute $A_{10}$ has only two domain values and is the classifier. For $\Delta^*$ and  the attributes $A_i, 1\leq i \leq 9$ \begin{enumerate} \item which $A_i$ has the greatest variance? You will write an {\texttt R} function that takes a list of numbers and returns the variance.  \item which $A_i$ has the lowest entropy? You may use the {\texttt R} package {\texttt {entropy}} by Hausser and Strimmer.  \item Fill-in the table below  with the KL distance for attribute pairs.  For this we construct a mass function $P_i$ over $A_i$ by simple counting.  For a cell whose row, column entries are $A_i, A_j$, find $d_{KL}(P_i||P_j)$.  You may use an existing {\texttt {R}} function for this, but you need to provide sufficient package details for someone who would consider using that package.
+ 
+\begin{center}
+\begin{tabular}{c|ccccccccc}
+     &$A_1$ & $A_2$ & $A_3$ & $A_4$ & $A_5$ & $A_6$ & $A_7$ & $A_8$ & $A_9$\\ \hline
+$A_1$& 0	&  &  &  &  &  &  &  & \\ 
+$A_2$&  & 0  &  &  &  &  &  &  & \\
+$A_3$& &  &  0 &  &  &  &  &  & \\ 
+$A_4$& &  &  &  0 &  &  &  &  & \\ 
+$A_5$& &  &  &  & 0  &  &  &  & \\ 
+$A_6$& &  &  &  &  &  0 &  &  & \\ 
+$A_7$& &  &  &  &  &   & 0 &  & \\ 
+$A_8$& &  &  &  &  &  &   & 0 & \\ 
+$A_9$& &  &  &  &  &  &  &   &0 \\  
+\end{tabular}\[\] 
+\\ The KL distance between attributes of the cancer set.
+\end{center}
+
+ \end{enumerate} 
+  \item  Implement $k$-means so that you can cluster $\Delta^*$.   Since we have labels for the data, we can measure the quality of the clustering.  If an element of $\delta$ is correctly clustered in $c_i$ (nearest to the correct centroid), then it is considered a True Positive (TP).  If an element that correctly belongs to $c_i$ is clustered in a different $c_j$ (in other words, nearer and incorrect centroid), then the element is a False Positive (FP). The Positive Predictive Value (PPV) is\begin{eqnarray}
+  PPV &=& \frac{TP}{TP+FP}\label{tp} \end{eqnarray}  Investigate varying the number of blocks as well as the attributes used.  There are a modest number of attributes, so should use the powerset.  Discuss the result with simply finding pairs of correlations.
+\item One of the most common techniques in assessing function is using $V$-fold cross validation.  The idea is simple.  Suppose $|\Delta^*| = N$.  Partition $\Delta^*$ into $V=10$ sets $D^* = \{D_1^*,D_2^*,\ldots, D_{10}^*\}$ such that each $|D_i^*| = \frac{N}{10}$ tuples and all $D_i, D_j$ are pairwise disjoint.  The task is to use $V-1$ sets to train and the remaining $d$ to test.  
+
+\begin{center}
+\begin{tabular}{l||c|c}
+\textsf{Train} & \textsf{Test} & \textsf{PPV Result}\\ \hline \hline 
+$\texttt{kmeans}(D^* - \{ D_1^*\})$    & $D_1^*$   &$\alpha_1 $\\
+$\texttt{kmeans}(D^* - \{ D_2^*\})$    & $D_2^*$    & $\alpha_2$\\
+$\vdots$              & $\vdots$   & $\vdots$  \\
+$\texttt{kmeans}(D^* - \{ D_{10}^*\})$    & $D_{10}^*$    & $\alpha_{10}$\\
+\end{tabular}
+\end{center}
+
+The total PPV is then 
+\begin{eqnarray}
+ PPV(\Delta) &=& (1/10)\Sigma_{i=1}^{10} \alpha_i
+\end{eqnarray}
+ \end{enumerate}
+Calculate the PPV using $V$-fold cross validation.  Discuss your results.
+\section{KL Distance}
+We describe this for finite, discrete distributions.  Assume we have two distributions, $P = \{p_1, p_2, \ldots, p_n\}$ and $Q = \{q_1, q_2, \ldots, q_n\}$.
+
+Then the Kullback-Leibler divergence (or more commonly KL-distance) is
+\begin{eqnarray*}
+d(P,Q) &=& \Sigma_{i=1}^n p_i \log \frac{p_i}{q_i}
+\end{eqnarray*}
+You'll often see $D_{KL}(P||Q)$, but this really is more to remind us that this ``distance" is not symmetric.  Assume that when $p_i =0$ the expression is 0 (from continuity arguments--which isn't necessary to understand theoretically  for its initial exposition).  One way to think about this value is the currency you have to spend (in bits of course) to make $P$ into $Q$.
+\begin{center}
+\begin{tabular}{ccc}
+\texttt{Ans1} & \texttt{Ans2} & \texttt{Ans3} \\ \hline
+\texttt{Yes} & \texttt{No} & \texttt{Maybe} \\
+\texttt{Yes} & \texttt{No} & \texttt{No} \\
+\texttt{No} & \texttt{Yes} & \texttt{No} \\
+\texttt{Yes} & \texttt{No} & \texttt{Maybe} 
+\end{tabular}
+\end{center}
+\noindent{Example:} For the table above, $d(P_{\texttt{Ans1}}, Q_{\texttt{Ans2}})$ and $d(P_{\texttt{Ans1}}, R_{\texttt{Ans3}})$
+
+
+\begin{center}
+\begin{algorithmic}[1]
+\State $p_{\texttt{Yes}} = 3/4$
+\State $p_{\texttt{No}} = 1/4$
+\State $q_{\texttt{Yes}} = 1/4$
+\State $q_{\texttt{No}} = 3/4$
+\State $d(P_{\texttt{Ans1}}, Q_{\texttt{Ans2}}) = 3/4(\log(3/4)/(1/4)) + 1/4(\log(1/4)/(3/4))$
+\State $p_{\texttt{Maybe}} = 0$
+\State $r_{\texttt{Yes}} = 0$
+\State $r_{\texttt{No}} = 1/2$
+\State $r_{\texttt{Maybe}} = 1/2$
+\State $d(P_{\texttt{Ans1}}, R_{\texttt{Ans3}}) = 3/4(\log(3/4)/(0)) + 1/4(\log(1/4)/(1/2)) + 0(\log(0)/(1/2))$
+\end{algorithmic}
+\end{center}
+
+
+
+\bibliographystyle{unsrt} 
+\bibliography{foo}
+\end{document}

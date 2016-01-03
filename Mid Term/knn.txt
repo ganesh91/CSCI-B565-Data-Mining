@@ -1,0 +1,10 @@
+[1] CID5
+Levels: CID1 CID10 CID11 CID12 CID13 CID14 CID2 CID3 CID4 CID5 CID6 CID7 CID8 CID9
+> ru_knn<-knn(movie_df[-1],movie_test[,-1],movie_df[,1],k=3)
+> ru_knn
+[1] CID14
+Levels: CID1 CID10 CID11 CID12 CID13 CID14 CID2 CID3 CID4 CID5 CID6 CID7 CID8 CID9
+> ru_knn<-knn(movie_df[-1],movie_test[,-1],movie_df[,1],k=3)
+> ru_knn
+[1] CID14
+Levels: CID1 CID10 CID11 CID12 CID13 CID14 CID2 CID3 CID4 CID5 CID6 CID7 CID8 CID9
