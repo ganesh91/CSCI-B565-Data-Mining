@@ -8,6 +8,7 @@ Implementation of k-Means algorithm. Implement cross-validation for choosing a k
 
 ## Data Mining Algorithms
 Use a synthetic movie dataset and apply following algorithms for movie recommendation.
+
 1. Using k-Means clustering
 2. A-Priori Method, Market Basket Analysis
 3. K-Nearest Neighbours
